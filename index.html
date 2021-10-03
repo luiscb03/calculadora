@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Yaldevi:wght@200&display=swap" rel="stylesheet">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <p>Calculadora <strong>Web</strong></p>
+    <div id="contenedor-padre" class="padre">
+        <div id="pantalla" class="pantalla">
+            <div class="pantalla-superior">
+                <h1 id="num1" class="num-op"></h1>
+                <h1 id="operador" class="num-op"></h1>
+                <h1 id="num3" class="num-op"></h1>
+            </div>
+            <div class="pantalla-inferior" id="inferior">
+                <h1 id="resultado" class="num-resultado">0</h1>
+            </div>
+        </div>
+        <div id="contenedor-interno" class="interno">
+            <button onclick="clearAll()">AC</button>
+            <button onclick="clearr()">C</button>
+            <button onclick="historial()">H</button>
+            <button onclick="clearHistorial()" style="background-color: #04314f; color: white;" class="operadores">CH</button>
+            <button onclick="escribir(9)">9</button>
+            <button onclick="escribir(8)">8</button>
+            <button onclick="escribir(7)">7</button>
+            <button onclick="escribir('+')" style="background-color: #04314f; color: white;" class="operadores">+</button>
+            <button onclick="escribir(6)">6</button>
+            <button onclick="escribir(5)">5</button>
+            <button onclick="escribir(4)">4</button>
+            <button onclick="escribir('-')" style="background-color: #04314f; color: white;" class="operadores">-</button>
+            <button onclick="escribir(3)">3</button>
+            <button onclick="escribir(2)">2</button>
+            <button onclick="escribir(1)">1</button>
+            <button onclick="escribir('x')" style="background-color: #04314f; color: white;" class="operadores">x</button>
+            <button onclick="escribir(0)">0</button>
+            <button onclick="escribir('.')">.</button>
+            <button onclick="resolver()" style="background-color: #469DFA;">=</button>
+            <button onclick="escribir('/')" style="background-color: #04314f; color: white;" class="operadores">/</button>
+        </div>
+    </div>
+
+    <div id="ventana-madre" class="modal-superior">
+        <div id="ventana-hija" class="mondal-interna">
+            <h1 class="titulo-historial">HISTORIAL</h1>
+                <div id="mostrar-elementos" class="mostrar-elementos">
+                   <ul id="lista"></ul>
+                </div>
+            <button onclick="cerrarHistorial()" class="cerrar">Aceptar</button>
+        </div>
+    </div>
+
+    <di class="footer">
+        <h3 class="footerTitle">2021 Universidad de la costa - Desarrollo web I <br> 
+            Desarrollado por: Luis Caballero y Daniel De La hoz
+        </h3>
+        <h3 class="fsub"></h3><br>
+    </di>
+</body>
+</html>
